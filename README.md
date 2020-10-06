@@ -1,4 +1,13 @@
+
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=lionelee&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
+
 ### Hi there 👋
+<p align="left">
+<a href="https://lionelee.github.io"><img src="https://img.shields.io/badge/Blog-lionelee-dodgerblue.svg" alt="My Blog"></a><br/>
+<a href="https://weibo.com/u/5869279527"><img src="https://img.shields.io/badge/Weibo-lionelee-red.svg" alt="Weibo"></a><br/>
+<a href="https://www.linkedin.com/in/lionelee/"><img src="https://img.shields.io/badge/LinkedIn-lionelee-deepskyblue.svg" alt="LinkedIn"></a><br/>
+<a href="mailto:lixycm@gmail.com/"><img src="https://img.shields.io/badge/Email-Me-teal.svg" alt="Email"></a><br/>
+</p>
 
 <!--
 **lionelee/lionelee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
