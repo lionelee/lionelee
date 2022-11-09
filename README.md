@@ -1,5 +1,9 @@
-
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=lionelee&count_private=true&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff00&hide_title=true" />
+<a href="https://github.com/lionelee/github-readme-stats#gh-dark-mode-only">
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=lionelee&count_private=true&show_icons=true&hide_title=true&theme=dark&icon_color=CE1D2D"/>
+</a>
+<a href="https://github.com/lionelee/github-readme-stats#gh-light-mode-only">
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=lionelee&count_private=true&show_icons=true&hide_title=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff"/>
+</a>
 
 ### Hi there 👋
 <p align="left">
