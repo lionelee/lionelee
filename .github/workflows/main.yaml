@@ -31,7 +31,7 @@ jobs:
         run: |
           ls dist
           test -f dist/github-contribution-grid-snake.svg
-          test -f dist/github-contribution-grid-snake.gif
+          test -f dist/github-contribution-grid-snake.gif?color_snake=purple&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
 
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
