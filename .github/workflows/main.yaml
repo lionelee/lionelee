@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: generate github-contribution-grid-snake
-        uses: Platane/snk@master
+        uses: Platane/snk@v2
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
