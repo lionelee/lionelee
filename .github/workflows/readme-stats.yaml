@@ -1,0 +1,54 @@
+name: update readme stats
+
+on:
+  # run automatically every day at 00:00 UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      # the action falls back to GITHUB_TOKEN (public data only) when the token input is empty
+      - name: ensure the STATS_TOKEN secret is set
+        env:
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: test -n "$STATS_TOKEN"
+
+      - uses: actions/checkout@v7
+
+      # core_version "" uses the core locked in the action's pnpm-lock.yaml (2.2.0)
+      - name: generate light stats card
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=lionelee&show_icons=true&hide_title=true&icon_color=CE1D2D&text_color=718096&bg_color=FFFFFF
+          path: stats-light.svg
+          token: ${{ secrets.STATS_TOKEN }}
+          core_version: ""
+          fail_on_error: true
+
+      - name: generate dark stats card
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=lionelee&show_icons=true&hide_title=true&theme=dark&icon_color=CE1D2D&title_color=2F80ED&bg_color=00000000
+          path: stats-dark.svg
+          token: ${{ secrets.STATS_TOKEN }}
+          core_version: ""
+          fail_on_error: true
+
+      # the cards are served at https://raw.githubusercontent.com/lionelee/lionelee/readme-stats-svg/<file>
+      - name: push to the output branch
+        run: |
+          git switch --orphan readme-stats-svg
+          git add stats-light.svg stats-dark.svg
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Update README stats cards"
+          git push --force origin readme-stats-svg
