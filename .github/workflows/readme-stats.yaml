@@ -8,10 +8,6 @@ on:
   # allows to manually run the job at any time
   workflow_dispatch:
 
-  push:
-    branches:
-      - fix/readme-stats-cards
-
 jobs:
   generate:
     runs-on: ubuntu-latest
